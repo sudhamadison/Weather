@@ -4,5 +4,5 @@
     <h2><%: Title %>.</h2>
     <h3>Your application description page.</h3>
     <p>Use this area to provide additional information.</p>
-    <p>test code change</p>
+    <p>This is a test paragraph</p>
 </asp:Content>
