@@ -18,12 +18,16 @@ namespace WebService.Entity
         public string father_name { get; set; }
         public string department { get; set; }
         public string gender { get; set; }
-        public string spouse_name { get; set; }
-        public string permanent_address { get; set; }
-        public string temporary_address { get; set; }
+        public string spouse_full_name { get; set; }
         public string avatar_path { get; set; }
         public string created_at { get; set; }
         public string updated_at { get; set; }
+        public string address_1 { get; set; }
+        public string address_2 { get; set; }
+        public string city { get; set; }
+        public string state_name { get; set; }
+        public string zipcode { get; set; }
         
+
     }
 }

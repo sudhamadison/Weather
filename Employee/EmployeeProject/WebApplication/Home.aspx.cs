@@ -31,10 +31,14 @@ namespace WebApplication
                 employee.father_name = Request.Form["father_name"];
                 employee.department = Request.Form["department"];
                 employee.gender = Request.Form["gender"];
-                employee.spouse_name = Request.Form["spouse_name"];
-                employee.permanent_address = Request.Form["p_address"];
-                employee.temporary_address = Request.Form["c_address"];
+                employee.spouse_full_name = Request.Form["spouse_full_name"];
                 employee.avatar_path = "";
+                employee.address_1 = Request.Form["address_1"];
+                employee.address_2 = Request.Form["address_2"];
+                employee.city = Request.Form["city"];
+                employee.state_name = Request.Form["state_name"];
+                employee.zipcode = Request.Form["zipcode"];
+
 
                 // Upload user avatar
                 var file = Request.Files["avatar"];

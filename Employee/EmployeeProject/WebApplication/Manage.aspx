@@ -112,12 +112,44 @@
                                                     <asp:Label Text='<%# Eval("designation") %>' runat="server"></asp:Label>
                                                 </ItemTemplate>
                                             </asp:TemplateField>
-                                            <asp:TemplateField HeaderText="P-Address" SortExpression="permanent_address" ControlStyle-Width="120px" >
+                                            <asp:TemplateField HeaderText="Address 1" SortExpression="address_1" ControlStyle-Width="120px" >
                                                 <EditItemTemplate>
-                                                    <asp:TextBox ID="permanent_address" runat="server" Text='<%# Eval("permanent_address") %>' Width="100px"> </asp:TextBox>
+                                                    <asp:TextBox ID="address_1" runat="server" Text='<%# Eval("address_1") %>' Width="100px"> </asp:TextBox>
                                                 </EditItemTemplate>
                                                 <ItemTemplate>
-                                                <asp:Label ID="Label4" runat="server" Text='<%#  Eval("permanent_address") %>'></asp:Label>
+                                                <asp:Label ID="Label4" runat="server" Text='<%#  Eval("address_1") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            </asp:TemplateField>
+                                             <asp:TemplateField HeaderText="Address 2" SortExpression="address_2" ControlStyle-Width="120px" >
+                                                <EditItemTemplate>
+                                                    <asp:TextBox ID="address_2" runat="server" Text='<%# Eval("address_2") %>' Width="100px"> </asp:TextBox>
+                                                </EditItemTemplate>
+                                                <ItemTemplate>
+                                                <asp:Label ID="Label5" runat="server" Text='<%#  Eval("address_2") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            </asp:TemplateField>
+                                             <asp:TemplateField HeaderText="City" SortExpression="city" ControlStyle-Width="120px" >
+                                                <EditItemTemplate>
+                                                    <asp:TextBox ID="city" runat="server" Text='<%# Eval("city") %>' Width="100px"> </asp:TextBox>
+                                                </EditItemTemplate>
+                                                <ItemTemplate>
+                                                <asp:Label ID="Label6" runat="server" Text='<%#  Eval("city") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            </asp:TemplateField>
+                                             <asp:TemplateField HeaderText="State" SortExpression="state_name" ControlStyle-Width="120px" >
+                                                <EditItemTemplate>
+                                                    <asp:TextBox ID="state_name" runat="server" Text='<%# Eval("state_name") %>' Width="100px"> </asp:TextBox>
+                                                </EditItemTemplate>
+                                                <ItemTemplate>
+                                                <asp:Label ID="Label7" runat="server" Text='<%#  Eval("state_name") %>'></asp:Label>
+                                            </ItemTemplate>
+                                            </asp:TemplateField>
+                                             <asp:TemplateField HeaderText="Zipcode" SortExpression="zipcode" ControlStyle-Width="120px" >
+                                                <EditItemTemplate>
+                                                    <asp:TextBox ID="zipcode" runat="server" Text='<%# Eval("zipcode") %>' Width="100px"> </asp:TextBox>
+                                                </EditItemTemplate>
+                                                <ItemTemplate>
+                                                <asp:Label ID="Label8" runat="server" Text='<%#  Eval("zipcode") %>'></asp:Label>
                                             </ItemTemplate>
                                             </asp:TemplateField>
                                             <asp:TemplateField HeaderText="Avatar">
