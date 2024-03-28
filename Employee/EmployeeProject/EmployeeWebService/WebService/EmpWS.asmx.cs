@@ -75,7 +75,7 @@ namespace WebService
             if (HttpContext.Current.Request.HttpMethod == "POST")
             {
                 SqlConnection conn = EmpWS.GetDBInstance();
-                conn.Open();
+               // conn.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "AddEmployeeReturnID";
@@ -88,15 +88,21 @@ namespace WebService
                 cmd.Parameters.AddWithValue("@father_name", employee.father_name.ToString());
                 cmd.Parameters.AddWithValue("@department", employee.department.ToString());
                 cmd.Parameters.AddWithValue("@gender", employee.gender.ToString());
-                cmd.Parameters.AddWithValue("@spouse_name", employee.spouse_name.ToString());
-                cmd.Parameters.AddWithValue("@permanent_address", employee.permanent_address.ToString());
-                cmd.Parameters.AddWithValue("@temporary_address", employee.temporary_address.ToString());
-                cmd.Parameters.AddWithValue("@avatar_path", employee.avatar_path);
+                cmd.Parameters.AddWithValue("@spouse_full_name", employee.spouse_full_name.ToString());
+                 cmd.Parameters.AddWithValue("@avatar_path", employee.avatar_path);
                 cmd.Parameters.AddWithValue("@created_at", DateTime.Now);
-                cmd.Connection = conn;
+                cmd.Parameters.AddWithValue("@updated_at", DateTime.Now); 
+                cmd.Parameters.AddWithValue("@address_1", employee.address_1.ToString());
+                cmd.Parameters.AddWithValue("@address_2", employee.address_2.ToString());
+                cmd.Parameters.AddWithValue("@city", employee.city.ToString());
+                cmd.Parameters.AddWithValue("@state_name", employee.state_name.ToString());
+                cmd.Parameters.AddWithValue("@zipcode", employee.zipcode.ToString());
+                
 
                 try {
-                    object obj = cmd.ExecuteNonQuery();
+                    cmd.Connection = conn;
+                    cmd.Connection.Open();
+                    var obj = cmd.ExecuteNonQuery();
                     message = "Record inserted successfully. ID = " + obj.ToString();
 
                     // Read the employee and return
@@ -109,7 +115,11 @@ namespace WebService
                     message = "Error inserting record:";
                     message += err.Message;
                     throw new Exception(message);
-                } finally {
+                }
+                finally
+                {
+                    cmd.Connection.Close();
+                    cmd.Dispose();
                     conn.Close();
                 }
             }

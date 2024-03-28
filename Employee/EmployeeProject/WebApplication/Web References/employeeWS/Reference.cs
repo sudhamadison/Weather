@@ -216,18 +216,25 @@ namespace WebApplication.employeeWS {
         
         private string genderField;
         
-        private string spouse_nameField;
+        private string spouse_full_nameField;
         
-        private string permanent_addressField;
+        private string address_1Field;
         
-        private string temporary_addressField;
-        
+        private string address_2Field;
+
+        private string cityField;
+
+        private string state_nameField;
+
+        private string zipcodeField;
+
         private string avatar_pathField;
         
         private string created_atField;
         
         private string updated_atField;
         
+
         /// <remarks/>
         public string id {
             get {
@@ -319,35 +326,77 @@ namespace WebApplication.employeeWS {
         }
         
         /// <remarks/>
-        public string spouse_name {
+        public string spouse_full_name {
             get {
-                return this.spouse_nameField;
+                return this.spouse_full_nameField;
             }
             set {
-                this.spouse_nameField = value;
+                this.spouse_full_nameField = value;
             }
         }
         
         /// <remarks/>
-        public string permanent_address {
+        public string address_1 {
             get {
-                return this.permanent_addressField;
+                return this.address_1Field;
             }
             set {
-                this.permanent_addressField = value;
+                this.address_1Field = value;
             }
         }
         
         /// <remarks/>
-        public string temporary_address {
+        public string address_2 {
             get {
-                return this.temporary_addressField;
+                return this.address_2Field;
             }
             set {
-                this.temporary_addressField = value;
+                this.address_2Field = value;
             }
         }
-        
+
+
+        /// <remarks/>
+        public string city
+        {
+            get
+            {
+                return this.cityField;
+            }
+            set
+            {
+                this.cityField = value;
+            }
+        }
+
+
+        /// <remarks/>
+        public string state_name
+        {
+            get
+            {
+                return this.state_nameField;
+            }
+            set
+            {
+                this.state_nameField = value;
+            }
+        }
+
+
+        /// <remarks/>
+        public string zipcode
+        {
+            get
+            {
+                return this.zipcodeField;
+            }
+            set
+            {
+                this.zipcodeField = value;
+            }
+        }
+
         /// <remarks/>
         public string avatar_path {
             get {

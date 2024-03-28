@@ -106,16 +106,28 @@
                                         </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Spouse name</label>
-                                    <input type="text" class="form-control" name="spouse_name" id="spouse_name" placeholder="Spouse name">
+                                    <label>Spouse Fullname</label>
+                                    <input type="text" class="form-control" name="spouse_full_name" id="spouse_full_name" placeholder="Spouse Fullname"/>
                                 </div>
                                 <div class="form-group">
-                                    <label>Current address</label>
-                                    <textarea class="form-control" rows="2" name="c_address" id="c_address" placeholder="Current address"></textarea>
+                                    <label> Address 1</label>
+                                    <textarea class="form-control" rows="2" name="address_1" id="address_1" placeholder="Address 1"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label>Permanent address</label>
-                                    <textarea class="form-control" rows="2" name="p_address" id="p_address" placeholder="Permanent address"></textarea>
+                                    <label>Address 2</label>
+                                    <textarea class="form-control" rows="2" name="address_2" id="address_2" placeholder="Address 2"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>City</label>
+                                    <textarea class="form-control"  name="city" id="city" placeholder="City"></textarea>
+                                </div>
+                                 <div class="form-group">
+                                    <label>State</label>
+                                    <textarea class="form-control"  name="state_name" id="state_name" placeholder="State"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>Zipcode</label>
+                                    <textarea class="form-control"  name="zipcode" id="zipcode" placeholder="Zipcode"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <asp:Button runat="server" Text="Submit" ID="Save" class="btn-lg btn-success"  OnClick="Save_Click" UseSubmitBehavior="False" Height="40px" />

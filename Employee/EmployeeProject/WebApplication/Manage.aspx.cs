@@ -44,7 +44,7 @@ namespace WebApplication
             DropDownList1.Items.Clear();
             foreach (DataRow row in table.Rows) {
                 string columnName = row[0].ToString();
-                if (columnName != "created_at" || columnName != "updated_at") {
+                if (!(columnName == "created_at" || columnName == "updated_at")) {
                     DropDownList1.Items.Add(columnName);
                 }
             }
@@ -93,8 +93,16 @@ namespace WebApplication
                                 .FindControl("department")).Text;
             string dob = ((TextBox)GridView1.Rows[e.RowIndex]
                                 .FindControl("dob")).Text;
-            string permanent_address = ((TextBox)GridView1.Rows[e.RowIndex]
-                                .FindControl("permanent_address")).Text;
+            string address_1 = ((TextBox)GridView1.Rows[e.RowIndex]
+                                .FindControl("address_1")).Text;
+            string address_2 = ((TextBox)GridView1.Rows[e.RowIndex]
+                                .FindControl("address_2")).Text;
+            string city = ((TextBox)GridView1.Rows[e.RowIndex]
+                                .FindControl("city")).Text;
+            string state_name = ((TextBox)GridView1.Rows[e.RowIndex]
+                                .FindControl("state_name")).Text;
+            string zipcode = ((TextBox)GridView1.Rows[e.RowIndex]
+                                .FindControl("zipcode")).Text;
             string designation = ((TextBox)GridView1.Rows[e.RowIndex]
                                 .FindControl("designation")).Text;
             string father_name = ((TextBox)GridView1.Rows[e.RowIndex]
@@ -105,7 +113,7 @@ namespace WebApplication
             SqlCommand cmd = new SqlCommand();
             cmd.CommandType = CommandType.Text;
             cmd.CommandText = "update employee set first_name=@first_name, last_name=@last_name, gender=@gender, " +
-                "department=@department, dob=@dob, permanent_address=@permanent_address, designation=@designation," +
+                "department=@department, dob=@dob, address_1=@address_1, address_2=@address_2, city=@city, state_name=@state_name, zipcode=@zipcode, designation=@designation," +
                 " father_name=@father_name " +
                 " where id=@id;";
             cmd.Parameters.Add("@first_name", SqlDbType.VarChar).Value = first_name;
@@ -115,7 +123,11 @@ namespace WebApplication
             cmd.Parameters.Add("@department", SqlDbType.VarChar).Value = department;
             cmd.Parameters.Add("@designation", SqlDbType.VarChar).Value = designation;
             cmd.Parameters.Add("@father_name", SqlDbType.VarChar).Value = father_name;
-            cmd.Parameters.Add("@permanent_address", SqlDbType.VarChar).Value = permanent_address;
+            cmd.Parameters.Add("@address_1", SqlDbType.VarChar).Value = address_1;
+            cmd.Parameters.Add("@address_2", SqlDbType.VarChar).Value = address_2;
+            cmd.Parameters.Add("@city", SqlDbType.VarChar).Value = city;
+            cmd.Parameters.Add("@state_name", SqlDbType.VarChar).Value = state_name;
+            cmd.Parameters.Add("@zipcode", SqlDbType.VarChar).Value = zipcode;
             cmd.Parameters.Add("@id", SqlDbType.VarChar).Value = id;
             cmd.Connection = con;
             object obj = cmd.ExecuteNonQuery();
