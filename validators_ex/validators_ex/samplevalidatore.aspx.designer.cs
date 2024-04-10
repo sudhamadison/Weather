@@ -85,6 +85,15 @@ namespace validators_ex {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqlastname;
         
         /// <summary>
+        /// RegularExpressionValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
+        
+        /// <summary>
         /// dob control.
         /// </summary>
         /// <remarks>
@@ -112,13 +121,22 @@ namespace validators_ex {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqdob;
         
         /// <summary>
-        /// RegularExpressionValidator2 control.
+        /// lblDOBErrorMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
+        protected global::System.Web.UI.WebControls.Label lblDOBErrorMsg;
+        
+        /// <summary>
+        /// lblFutureDateErrorMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblFutureDateErrorMsg;
         
         /// <summary>
         /// startdate control.
@@ -148,6 +166,24 @@ namespace validators_ex {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
+        /// lblStartDateErrorMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblStartDateErrorMsg;
+        
+        /// <summary>
+        /// lblPastDateErrorMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPastDateErrorMsg;
+        
+        /// <summary>
         /// enddate control.
         /// </summary>
         /// <remarks>
@@ -173,6 +209,24 @@ namespace validators_ex {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        
+        /// <summary>
+        /// lblEndDateErrorMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEndDateErrorMsg;
+        
+        /// <summary>
+        /// lblPastDateErrorMsg2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPastDateErrorMsg2;
         
         /// <summary>
         /// totalNoOfClaim control.
