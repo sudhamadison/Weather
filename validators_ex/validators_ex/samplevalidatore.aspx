@@ -1,13 +1,12 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="samplevalidatore.aspx.cs" Inherits="validators_ex.samplevalidatore" %>
-
+<%@ Import Namespace="System.Web.Optimization" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Validation Example</title>
-    <link rel="stylesheet" type="text/css" href="style/forms.css" />
-    <script type="text/javascript" src="validators/formValidators.js"></script>
-
+    <%Styles.Render("~/asset/MyAppCss"); %>
+    <%Scripts.Render("~/asset/MyAppJs"); %>
 
 </head>
 <body>
