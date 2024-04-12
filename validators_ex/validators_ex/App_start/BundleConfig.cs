@@ -16,7 +16,7 @@ namespace validators_ex.App_start
                 .Include("~/validators/formValidators.js"));
             bundle.Add(new StyleBundle("~/asset/MyAppCss")
                 .Include("~/style/forms.css"));
-            BundleTable.EnableOptimizations = true;
+            BundleTable.EnableOptimizations = false;
         }
     }
 }
