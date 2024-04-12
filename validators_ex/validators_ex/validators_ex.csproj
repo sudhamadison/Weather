@@ -88,7 +88,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ResponsiveWebDesign.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -99,6 +102,8 @@
   <ItemGroup>
     <Content Include="samplevalidatore.aspx" />
     <Content Include="style\forms.css" />
+    <Content Include="style\images\logo.jpg" />
+    <Content Include="style\images\samplepic.jpg" />
     <Content Include="validators\formValidators.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -117,6 +122,13 @@
       <DependentUpon>samplevalidatore.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_start\BundleConfig.cs" />
+    <Compile Include="ResponsiveWebDesign.aspx.cs">
+      <DependentUpon>ResponsiveWebDesign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResponsiveWebDesign.aspx.designer.cs">
+      <DependentUpon>ResponsiveWebDesign.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
