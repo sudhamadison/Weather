@@ -15,16 +15,16 @@
     <form id="form1" runat="server">
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-3 hidden-sm hidden-xs">
                     <img src="style/images/logo.jpg" class="img-responsive" />
                 </div>
-                <div class="col-md-9" style="color:orangered;  padding: 70px">
-                    <h1 style="font-size:60px">INSURANCE COMPANY</h1>
+                <div class="col-md-9">
+                    <h1>INSURANCE COMPANY</h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <h1 style="color:green; position: center">Claim Form</h1>
+                    <h1>Claim Form</h1>
                     <hr />
                 </div>
             </div>
